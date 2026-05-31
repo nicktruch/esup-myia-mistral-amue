@@ -1,7 +1,7 @@
 # Déployer un clone de ChatGPT souverain dans le cadre de l'expérimentation Mistral AMUE
 ## Version maquette locale — macOS Apple Silicon (M2)
 
-> ⚠️ **VERSION DE TRAVAIL — contenu non encore validé**
+> ✅🍎 **VERSION VALIDÉE SUR MACOS**
 > Ce document est une adaptation de la version Linux pour une installation de maquette locale sur MacBook Air M2. Il ne couvre pas un déploiement en production.
 
 ---
