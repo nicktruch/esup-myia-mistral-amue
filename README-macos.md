@@ -205,10 +205,10 @@ model_list:
   # Modèle local via Ollama — utilisable sans clé AMUE
   - model_name: qwen3
     litellm_params:
-      model: ollama/qwen3:1.7b
+      model: ollama/qwen3:0.6b
       api_base: http://host.docker.internal:11434
     model_info:
-      description: "Qwen3 1.7b — modèle local via Ollama"
+      description: "Qwen3 0.6b — modèle local via Ollama"
 ```
 
 > **Note Ollama** : `host.docker.internal` est l'adresse spéciale Docker Desktop sur Mac pour joindre un service qui tourne sur l'hôte (ton Mac) depuis un conteneur. Ollama doit être lancé avec `ollama serve` avant de démarrer la stack.
