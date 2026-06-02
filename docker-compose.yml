@@ -47,7 +47,7 @@ services:
     ports:
       - "${PORT_LITELLM:-4000}:4000"
     environment:
-      MISTRAL_API_KEY: ${MISTRAL_API_KEY}
+      ILAAS_API_KEY: ${ILAAS_API_KEY}
       LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY}
       LITELLM_SECRET: ${LITELLM_SECRET_KEY}
       DATABASE_URL: "postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}"
@@ -80,13 +80,11 @@ services:
       WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY}
       WEBUI_NAME: ${WEBUI_NAME}
       WEBUI_URL: ${WEBUI_URL}
-      DEFAULT_MODELS: "mistral-large"
+      DEFAULT_MODELS: "mistral-small"
       # ⚠️ Mettre "true" pour créer le premier compte admin, puis repasser à "false"
       ENABLE_SIGNUP: "false"
-      RAG_EMBEDDING_ENGINE: "openai"
-      RAG_EMBEDDING_MODEL: "mistral-embed"
-      RAG_OPENAI_API_BASE_URL: http://litellm:4000/v1
-      RAG_OPENAI_API_KEY: ${LITELLM_MASTER_KEY}
+      # RAG : pas de modèle d'embeddings via ILaaS
+      # Configurer Ollama + nomic-embed-text dans Admin → Settings → Documents
       SCARF_NO_ANALYTICS: "true"
       DO_NOT_TRACK: "true"
       ANONYMIZED_TELEMETRY: "false"
